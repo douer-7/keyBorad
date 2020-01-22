@@ -1,0 +1,22 @@
+.keyboard-keyboardBox {
+    background-color: #EDF2F4;
+    width: 100%;
+    /* height: 100%; */
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.keyboard-key {
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    color: #000;
+    background-image: url('../img/keyBg.png');
+    background-size: 100% 100%;
+    border-radius: 5px;
+    margin: .1%;
+}

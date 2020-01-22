@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "module": "commonjs",
+      "outDir": "src/js/",
+      // "noImplicitAny": true,
+      "removeComments": true,
+      "preserveConstEnums": true,
+    },
+    "include": [
+      "src/ts/*"
+    ],
+    "exclude": [
+      "node_modules",
+    ]
+  }
