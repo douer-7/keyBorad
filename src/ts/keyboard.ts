@@ -172,15 +172,14 @@ function Keyboard(d: { el, inputOn }) {
     ]
 
     this.keyboardInput = (mode: number, name: string) => {
-        let length = this.inputOn.value.length
+        let inputOn = document.querySelector(this.inputOn)        
         if (mode === 1) {
-            this.inputOn.value += name
+            inputOn.value += name
         } else if (mode === 0) {
-            this.inputOn.value = ''
+            inputOn.value = ''
         } else if (mode === -1) {
-            this.inputOn.value = this.inputOn.value.substr(0, length - 1)
+            inputOn.value = inputOn.value.substr(0, inputOn.value.length - 1)
         }
-
     }
     let boxWidth = document.querySelector(this.el).clientWidth
     let keySizeHeight = boxWidth * 0.06 + 'px'
@@ -189,19 +188,12 @@ function Keyboard(d: { el, inputOn }) {
 
     let innerHTML = ''
     keys.forEach((item) => {
-
-
-        // let key = document.createElement('div')
-        // key.innerHTML = item.name
-        // key.onclick = () => keyboardInput(item.inputMode, item.name)
-        // key.className = 'keyboard-key'
-        // keyboardBox.appendChild(key)
-
         let widthText = 'width:' + ((item.isLarge) ? bigKeySizeWidth : keySizeWidth) + ';'
         let heightText = 'height: ' + keySizeHeight + ';'
         let lineHeightText = 'line-height:' + keySizeHeight + ';'
-        let cssText = widthText + heightText + lineHeightText
-        let domA = '<div class= "keyboard-key" style=" ' + cssText + ' " onclick="Keyboard.keyboardInput(' + item.inputMode + ',' + item.name + ')">' + item.name + ' </div>'
+        let cssText = 'style= "' + widthText + heightText + lineHeightText + '"'
+        let onclick = 'onclick="keyBorad.keyboardInput(' + item.inputMode + ',' + "'" + item.name + "'" + ')"'
+        let domA = '<div class= "keyboard-key" ' + cssText + onclick + '>' + item.name + ' </div>'
         innerHTML = innerHTML + domA
     })
     document.querySelector(this.el).innerHTML = '<div class="keyboard-keyboardBox">' + innerHTML + '</div>'

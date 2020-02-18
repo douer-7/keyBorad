@@ -30,7 +30,7 @@
 
 <body>
     <div>
-        <input type="text" class="cardIdInput" placeholder="请输入卡号" onfocus="keyBoardFocus('.cardIdInput')">
+        <input type="text" class="cardIdInput" placeholder="请输入卡号" onfocus="keyBoardFocus('.cardIdInput')" onclick="()=>{Keyboard.keyboardInput}">
         <input type="text" class="stuIdInput" placeholder="请输入学号" onfocus="keyBoardFocus('.stuIdInput')">
     </div>
     <div id="keyBorad"></div>
@@ -42,12 +42,12 @@
             inputOn: '.cardIdInput',
         })
 
-        console.log(keyBorad);
-        
+        console.log(Keyboard.keyboardInput);
+
         function keyBoardFocus(inputOn) {
             keyBorad.inputOn = inputOn
         }
     </script>
 </body>
 
-</html>
+</html>            

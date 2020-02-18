@@ -167,15 +167,15 @@ function Keyboard(d) {
         }
     ];
     this.keyboardInput = function (mode, name) {
-        var length = _this.inputOn.value.length;
+        var inputOn = document.querySelector(_this.inputOn);
         if (mode === 1) {
-            _this.inputOn.value += name;
+            inputOn.value += name;
         }
         else if (mode === 0) {
-            _this.inputOn.value = '';
+            inputOn.value = '';
         }
         else if (mode === -1) {
-            _this.inputOn.value = _this.inputOn.value.substr(0, length - 1);
+            inputOn.value = inputOn.value.substr(0, inputOn.value.length - 1);
         }
     };
     var boxWidth = document.querySelector(this.el).clientWidth;
@@ -187,8 +187,9 @@ function Keyboard(d) {
         var widthText = 'width:' + ((item.isLarge) ? bigKeySizeWidth : keySizeWidth) + ';';
         var heightText = 'height: ' + keySizeHeight + ';';
         var lineHeightText = 'line-height:' + keySizeHeight + ';';
-        var cssText = widthText + heightText + lineHeightText;
-        var domA = '<div class= "keyboard-key" style=" ' + cssText + ' " onclick="keyboard.keyboardInput(' + item.inputMode + ',' + item.name + ')">' + item.name + ' </div>';
+        var cssText = 'style= "' + widthText + heightText + lineHeightText + '"';
+        var onclick = 'onclick="keyBorad.keyboardInput(' + item.inputMode + ',' + "'" + item.name + "'" + ')"';
+        var domA = '<div class= "keyboard-key" ' + cssText + onclick + '>' + item.name + ' </div>';
         innerHTML = innerHTML + domA;
     });
     document.querySelector(this.el).innerHTML = '<div class="keyboard-keyboardBox">' + innerHTML + '</div>';
