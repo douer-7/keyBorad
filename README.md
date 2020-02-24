@@ -1,14 +1,16 @@
 # keyborad
-![39键图片](https://douer-7.github.io/keyborad/demo/img/39.png)
+虚拟键盘
 直接引入src，声明方式见demo
 
+## Preview
+![](https://douer-7.github.io/keyborad/demo/img/39.png)
 [预览地址](https://douer-7.github.io/keyborad/)
 
 ## Feature 
 - 自适应
 - typescript
 
-### 提示
+## Tips
 - 键盘为自适应，但过大过小键盘内文字可能出现问题，请自行更改字号。
 暂时未作页面尺寸改变监听，所以需要手动刷新
 - 使用时ts文件夹可删除
