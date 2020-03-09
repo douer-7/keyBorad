@@ -2,9 +2,8 @@
 虚拟键盘
 直接引入src，声明方式见demo
 
-## Preview
+## Preview [预览地址](https://douer-7.github.io/keyborad/)
 ![](https://douer-7.github.io/keyborad/demo/img/39.png)
-[预览地址](https://douer-7.github.io/keyborad/)
 
 ## Feature 
 - 自适应
