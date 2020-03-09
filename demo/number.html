@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>虚拟键盘</title>
+    <title>数字虚拟键盘</title>
     <link rel="stylesheet" href="../src/css/keyboard.css">
     <style>
         body {
@@ -21,7 +21,7 @@
         }
 
         #keyBorad {
-            width: 80vw;
+            width: 30vw;
             height: 35vh;
             margin: 0 auto;
         }
@@ -31,11 +31,11 @@
 <body>
     <div>
         <input type="text" class="cardIdInput" placeholder="请输入卡号" onfocus="keyBoardFocus('.cardIdInput')" onclick="()=>{Keyboard.keyboardInput}">
-        <input type="text" class="stuIdInput" placeholder="请输入学号" onfocus="keyBoardFocus('.stuIdInput')">
+        <input type="text" class="stuIdInput" placeholder="请输学号" onfocus="keyBoardFocus('.stuIdInput')">
     </div>
     <div id="keyBorad"></div>
 
-    <script src="../src/js/keyboard-39.js"></script>
+    <script src="../src/js/keyboard-number.js"></script>
     <script>
         let keyBorad = new Keyboard({
             el: '#keyBorad',
